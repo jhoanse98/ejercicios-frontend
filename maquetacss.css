@@ -1,0 +1,225 @@
+body{
+    margin:0px;
+    background-color: #9097C0;
+    font-family: 'Muli', sans-serif;
+}
+
+.header {
+    background-color: #9097C0;
+    width:100%;
+    height:80px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header__img{
+    width: 80px;
+    height: 80px;
+}
+.header__menu{
+    margin-right: 60px;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position:absolute;
+    text-align: right;
+    width: 100px;
+    margin: 0px 0px 0px -15px;
+}
+
+.header__menu li{
+    margin:10px 0px;
+}
+
+.header__menu li a {
+    color:white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu--profile{
+    width: 40px;
+    display: flex;
+}
+
+.header__menu--profile p{
+    margin-bottom: 0px;
+    color:white;
+}
+
+.main{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__title{
+    color: white;
+    font-size: 25px;
+}
+
+.input {
+    border: 2px solid white;
+    border-radius: 25px;
+    height: 50px;
+    font-size: 17px;
+    width: 70%;
+    font-family: 'Muli', sans-serif;
+    background-color: rgba(255,255,255,0.5);
+    padding: 0px 20px;
+    outline: none;
+}
+::placeholder{
+    color:white;
+}
+.carousel{
+    width: 100%;
+    padding:0px;
+    overflow: hidden;
+    position: relative;
+    margin:20px;
+
+}
+
+.carousel__container{
+    white-space: nowrap; /*se sigue hacia la derecha el contenido */
+    margin:70px 0px;
+    padding-bottom: 10px;
+
+}
+
+.carousel-item{
+    background-color: violet;
+    border-radius: 20px;
+    height: 200px;
+    width: 150px;
+    display:inline-block;
+    margin-right: 10px;
+    cursor:pointer;
+    overflow: hidden;
+    transition: 550ms all;
+    transform-origin: center left;
+    position:relative;
+}
+
+/* selector ~ implica que todos los que cumplan los requisitos y sean hermanos serán afectados*/
+.carousel-item:hover ~ .carousel-item { /*cuando me ubique en un item, todos los demas transforman*/
+    transform: translate3d(100px,0,0);
+}
+
+.carousel-item__img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover; /*ajusta a tamaño normal sobre el container*/
+}
+
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    opacity:0;
+    transition: 450ms opacity;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom: 0px; 
+    display: flex;
+    align-items: flex-end;   
+}
+
+.play{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 130px;
+    left: 5px;
+}
+
+.plus{
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 130px;
+    left: 30px;  
+}
+
+.carousel-item__details:hover{
+    opacity: 1;
+    transition: 400ms;
+}
+
+
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover{
+    opacity:1;
+    transform: scale(1.2);
+}
+
+.carousel-item__details--title{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin:0px;
+    position: absolute;
+    left: 5px;
+    bottom: 30px;
+}
+
+.carousel-item__details--subtitle{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+}
+
+.carousel-item__details-titles{
+    display: block;
+}
+
+.categories {
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    color: white;
+    margin-left: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer{
+    background-color: #AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

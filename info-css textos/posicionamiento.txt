@@ -1,0 +1,28 @@
+position: relative
+	El elemento se coloca en relación a su posición normal
+
+position: absolute
+	los elementos con esta posición se ubican en relación al elemento relativo más cercano. 		Aquí podemos hacer uso de las propiedades top, bottom, left y right.
+
+position: fixed
+	El elemento se ubica en relación con la ventana del navegador y también se ve afectado 		por las propiedades top, bottom, left y right
+
+position: sticky
+	el elemento se posiciona en función de la posición de desplazamiento del usuario. si lo 	ubicas a la izquierda siempre va a estar ahí sin importar cuántas veces se haga scroll 	en la pagina, por ejemplo
+
+position: static
+	siguen el flujo normal de la pagina y no se ven afectados por las propiedades top, bottom, left y right
+
+position: initial
+	ubica el elemento en la posición que tiene de forma predeterminada
+
+Position:inherital
+	Este valor hereda esta propiedad de su elemento padre
+
+ARQUITECTURAS DE CSS
+-predecibles
+-reutilizable
+-mantenible
+-escalable
+
+

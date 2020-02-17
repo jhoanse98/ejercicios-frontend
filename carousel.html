@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+</head>
+<style>
+    body{
+        margin:0px;
+    }
+    .carousel{
+        width: 100%;
+        padding:30px;
+        overflow: scroll;
+        position: relative;
+        margin:20px;
+
+    }
+
+    .carousel__container{
+        white-space: nowrap; /*se sigue hacia la derecha el contenido */
+        margin:70px 0px;
+        padding-bottom: 10px;
+
+    }
+
+    .carousel-item{
+        background-color: violet;
+        border-radius: 20px;
+        height: 200px;
+        width: 150px;
+        display:inline-block;
+        margin-right: 10px;
+        cursor:pointer;
+        overflow: hidden;
+        transition: 550ms all;
+        transform-origin: center left;
+        position:relative;
+    }
+
+    /* selector ~ implica que todos los que cumplan los requisitos y sean hermanos serán afectados*/
+    .carousel-item:hover ~ .carousel-item { /*cuando me ubique en un item, todos los demas transforman*/
+        transform: translate3d(100px,0,0);
+    }
+
+    .carousel-item__img{
+        width: 150px;
+        height: 200px;
+        object-fit: cover; /*ajusta a tamaño normal sobre el container*/
+    }
+
+    .carousel-item__details{
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        font-size: 10px;
+        opacity:0;
+        transition: 450ms opacity;
+        position: absolute;
+        top:0px;
+        left:0px;
+        right:0px;
+        bottom: 0px; 
+        display: flex;
+        align-items: flex-end;   
+    }
+
+    .play{
+        width: 20px;
+        height: 20px;
+        position:absolute;
+        top: 130px;
+        left: 5px;
+    }
+
+    .plus{
+        width: 20px;
+        height: 20px;
+        position:absolute;
+        top: 130px;
+        left: 30px;  
+    }
+
+    .carousel-item__details:hover{
+        opacity: 1;
+        transition: 400ms;
+    }
+
+
+    .carousel__container:hover .carousel-item{
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel-item:hover{
+        opacity:1;
+        transform: scale(1.2);
+    }
+    
+    .carousel-item__details--title{
+        color:white;
+        font-size: 20px;
+        font-weight: bold;
+        margin:0px;
+        position: absolute;
+        left: 5px;
+        bottom: 30px;
+    }
+
+    .carousel-item__details--subtitle{
+        color:white;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0px;
+        position: absolute;
+        left: 5px;
+        bottom: 10px;
+    }
+
+    .carousel-item__details-titles{
+        display: block;
+    }
+
+
+
+   
+
+</style>
+<body>
+    <section class="carousel">
+        <div class=carousel__container>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="viper.jpg" alt="kid">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="play" src="https://img.icons8.com/flat_round/64/000000/play--v1.png" alt="play">
+                        <img class="plus" src="https://img2.freepng.es/20180318/hfe/kisspng-symbol-plus-and-minus-signs-clip-art-plus-symbol-5aaeb3fea77569.6911227915213987826859.jpg" alt="plus">
+                    </div>
+                    <div class="carousel-item__details-titles">
+                        <h3 class= "carousel-item__details--title">Descripción</h3>
+                        <p class= "carousel-item__details--subtitle">2019 +16 114min</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+
+            </div>
+            <div class="carousel-item">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

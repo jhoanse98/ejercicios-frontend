@@ -1,0 +1,35 @@
+variables en sass
+
+$variable: #93FC08; ejemplo
+
+anidamiento: lo que podemos hacer es tener una clase y dentro de ella tener mas estilos, es decir, la clase interna va a tomar los estilos anteriores y anexa a los estilos que tiene internos
+
+herencia: heredar los atributos de una clase en otra. ejemplo:
+
+.flex {
+	display:flex;
+	align-items:center;
+}
+
+.header {
+	@extend .flex;
+	background-color: #212121;
+	height: 100px;
+}
+
+header heredará los atributos que posee la clase flex (es decir, la clase header tendra background-color, height, display, align-items)
+
+
+mixin: similar a la herencia
+
+@mixin flex{
+	display:flex;
+	align-items:center;
+}
+
+.header {
+	@include flex;
+	background-color: #212121;
+	height: 100px;
+}
+	

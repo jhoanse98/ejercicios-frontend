@@ -1,0 +1,25 @@
+los elementos en css que como se han mencionado antes manejan el formato caja, tambien presentan un comportamiento mediante la propiedad display. estos son los mas usados: block, inline, inline-block, none, flex, grid
+
+block: maneja el flujo de bloque de arriba a abajo es decir, los elementos se visualizan uno debajo del otro.
+        algunos elementos que por defecto tienen este tipo de display son <div>, <p>, <h1>, <section> y <ul>
+
+inline: Todos los elementos con este tipo de display se visualizarán de izquierda a derecha, uno al lado del otro
+        algunos elementos que por defecto tienen este tipo de display son <span>, <em> y <b>
+
+inline-block: es muy similar al inline, la diferencia radica en que este respeta el width y el height que se le asigne a los elementos
+
+None: este display es utilizado para ocultar elementos sin eliminarlos por completo del DOM
+
+Table: los elementos con este display se comportan como los elementos <table>
+
+Flex: alinear elementos. Para usar flexbox es indispensable la propiedad display: flex ene el elemento padre que por defecto alineará los elementos hijos de izquierda a derecha. tambien, este display suele acompañarse por otras propiedades como justify-content y align-items.
+documentación: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Grid: para implementarlo debemos hacer uso de display: grid en el elemento contenedor o elemento padre.
+documentacion:https://css-tricks.com/snippets/css/complete-guide-grid/
+
+grid-area: admite cuatro valores separados por barras oblicuas --> grid-row-start, grid-column-start, grid-row-end, grid-column-end
+ejemplo: grid-area: 1/2/4/6
+
+grid-template-columns: 20% 20% 20% 20% 20% (me establece una cuadricula de 5 columnas)
+se puede abreviar congrid-template-columns: repeat(5,20%)

@@ -1,0 +1,18 @@
+OOCSS : css orientado a objectos. separa el diseño del contenido y asi poder reutilizar el mucho mejor el código.
+
+BEM: block element modifier. Separa los bloques, los elementos y modificadores
+
+SMACSS: arquitectura css escalable y modular
+	dividir css en componentes bases
+	elemetos que se usan en la pagina una unica vez (header footer) layout
+	module son componentes que se utilizan mas de una vez en la aplicación
+	estados: acciones de algun componente
+	theme cuando cambien los temas o componentes se vean en el código
+
+ITCSS triangulo invertido de css. dividir todos los archivos de css en ciertas partes para que no se mezclen entre sí
+
+atomic design se separan en atomos, elementos mas pequeños eje. botones
+	moleculas
+	organismos
+	templates
+	paginas
